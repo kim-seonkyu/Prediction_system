@@ -1,0 +1,841 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>🎥 Movie Prediction</title>
+    <!-- Favicon-->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'assets/favicon.ico'%}"
+    />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/index_styles.css' %}" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">🎥 Movie Prediction</a>
+        <button
+          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"
+                >News</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="ver1"
+                >Prediction system</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img
+          class="masthead-avatar mb-5"
+          src="{% static 'assets/img/avataaars.svg' %}"
+          alt="..."
+        />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">영화 흥행 예측</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">데꾸</p>
+      </div>
+    </header>
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2
+          class="page-section-heading text-center text-uppercase text-secondary mb-0"
+        >
+          NEWS
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+          <!-- Portfolio Item 1-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="portfolio-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal1"
+            >
+              <div
+                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="portfolio-item-caption-content text-center text-white"
+                >
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/portfolio/cabin.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 2-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="portfolio-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal2"
+            >
+              <div
+                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="portfolio-item-caption-content text-center text-white"
+                >
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/portfolio/cake.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 3-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="portfolio-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal3"
+            >
+              <div
+                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="portfolio-item-caption-content text-center text-white"
+                >
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/portfolio/circus.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <!-- about Section Heading-->
+        <h2
+          class="page-section-heading text-center text-uppercase text-secondary mb-0"
+        >
+          ABOUT US
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- about Grid Items-->
+        <div class="row justify-content-center">
+          <!-- about Item 1-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="about-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal1"
+            >
+              <div
+                class="about-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="about-item-caption-content text-center text-white"
+                ></div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/about/신지훈.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- about Item 2-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="about-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal2"
+            >
+              <div
+                class="about-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="about-item-caption-content text-center text-white"
+                ></div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/about/권재희.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- about Item 3-->
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div
+              class="about-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal3"
+            >
+              <div
+                class="about-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="about-item-caption-content text-center text-white"
+                ></div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/about/김선규.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- about Item 4-->
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <div
+              class="about-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal4"
+            >
+              <div
+                class="about-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="about-item-caption-content text-center text-white"
+                ></div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/about/조윤주.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- about Item 5-->
+          <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+            <div
+              class="about-item mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutModal5"
+            >
+              <div
+                class="about-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+              >
+                <div
+                  class="about-item-caption-content text-center text-white"
+                ></div>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/img/about/조현준.png' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <!-- Footer Location-->
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">
+              MULCAM
+              <br />
+              DAEKKU
+            </p>
+          </div>
+
+          <!-- Footer About Text-->
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">About TEAM</h4>
+            <p class="lead mb-0">MULTICAMPUS DAEKKU</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; 데꾸 2022</small>
+      </div>
+    </div>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal1"
+      tabindex="-1"
+      aria-labelledby="portfolioModal1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2
+                    class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                  ></h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/portfolio/예측.png' %}"
+                    alt="..."
+                  />
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">
+                    이를 보면 전문가가 각본을 줄거리 설정, 주인공 유형, 조연
+                    설정, 결말 등의 요소로 세세하게 나눠서 평가했다는 사실을 알
+                    수 있습니다.
+                    <br />
+                    <a
+                      href="https://post.naver.com/viewer/postView.nhn?volumeNo=16885335&memberNo=7094632&vType=VERTICAL"
+                      >영화 흥행 예측도 기계 뇌가 한다고?</a
+                    >
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal2"
+      tabindex="-1"
+      aria-labelledby="portfolioModal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2
+                    class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                  ></h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/portfolio/워너.png' %}"
+                    alt="..."
+                  />
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">
+                    미국 영화사 워너 브라더스(Warner Bros.)가 향후 영화 제작
+                    프로젝트 관련 의사 결정 과정에서 인공지능(AI)을 활용할
+                    계획이다.
+                    <br />
+                    <a
+                      href="http://www.aitimes.com/news/articleView.html?idxno=124612"
+                      >워너 브라더스, AI로 영화 흥행 가능성 예측</a
+                    >
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal3"
+      tabindex="-1"
+      aria-labelledby="portfolioModal3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2
+                    class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                  ></h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/portfolio/넷플.png' %}"
+                    alt="..."
+                  />
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">
+                    2021년 국내 최대 기대작이었던 '승리호'의 제작비는
+                    240억원이다. 손익분기점은 580만 관객이라고 한다. 코로나19
+                    확산으로 넷플릭스를 통해 개봉하게 되면서 승리호 흥행이
+                    '대박'이었을지 '쪽박'이었을지 추측은 어렵다. 만일 AI가 영화
+                    흥행을 예측했다면 승리호의 예상 성적은 어땠을까...
+                    <br />
+                    <a href="https://www.ajunews.com/view/20210411171741565"
+                      >영화 흥행도 AI가 점쳐준다</a
+                    >
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about Modals-->
+    <!-- about Modal 1-->
+    <div
+      class="about-modal modal fade"
+      id="aboutModal1"
+      tabindex="-1"
+      aria-labelledby="aboutModal1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- about Modal - Title-->
+                  <h2
+                    class="about-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    신지훈
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- about Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/about/신지훈.png' %}"
+                    alt="..."
+                  />
+                  <!-- about Modal - Text-->
+                  <p class="mb-4">
+                    프로젝트 기획 / 데이터 크롤링 / 데이터 분석 / 데이터 시각화
+                    <br />
+                    / 데이터 모델링 / 스토리텔링
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about Modal 2-->
+    <div
+      class="about-modal modal fade"
+      id="aboutModal2"
+      tabindex="-1"
+      aria-labelledby="aboutModal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- about Modal - Title-->
+                  <h2
+                    class="about-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    권재희
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- about Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/about/권재희.png' %}"
+                    alt="..."
+                  />
+                  <!-- about Modal - Text-->
+                  <p class="mb-4">
+                    프로젝트 기획 / 데이터 크롤링 / 데이터 분석 / 데이터 시각화
+                    <br />
+                    / 데이터 모델링 / 스토리텔링
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about Modal 3-->
+    <div
+      class="about-modal modal fade"
+      id="aboutModal3"
+      tabindex="-1"
+      aria-labelledby="aboutModal3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- about Modal - Title-->
+                  <h2
+                    class="about-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    김선규
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- about Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/about/김선규.png' %}"
+                    alt="..."
+                  />
+                  <!-- about Modal - Text-->
+                  <p class="mb-4">
+                    프로젝트 기획 / 데이터 크롤링 / 데이터 분석 / 통계적 분석 /
+                    <br />
+                    데이터 모델링 / 웹페이지 구현
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about Modal 4-->
+    <div
+      class="about-modal modal fade"
+      id="aboutModal4"
+      tabindex="-1"
+      aria-labelledby="aboutModal4"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- about Modal - Title-->
+                  <h2
+                    class="about-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    조윤주
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- about Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/about/조윤주.png' %}"
+                    alt="..."
+                  />
+                  <!-- about Modal - Text-->
+                  <p class="mb-4">
+                    프로젝트 기획 / 데이터 크롤링 / 데이터 분석 / 데이터 시각화
+                    /
+                    <br />
+                    스토리텔링 / PPT 제작
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about Modal 5-->
+    <div
+      class="about-modal modal fade"
+      id="aboutModal5"
+      tabindex="-1"
+      aria-labelledby="aboutModal5"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- about Modal - Title-->
+                  <h2
+                    class="about-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    조현준
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- about Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="{% static 'assets/img/about/조현준.png' %}"
+                    alt="..."
+                  />
+                  <!-- about Modal - Text-->
+                  <p class="mb-4">데이터 크롤링</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/index_scripts.js' %}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  </body>
+</html>
