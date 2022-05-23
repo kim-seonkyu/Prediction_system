@@ -241,8 +241,8 @@ def naver_starbuzz(title, actor, date):
     return star_buzz
 
 def search_title(title):
-    client_id = 'Lk7LFAa6MYxfjen14u8y'
-    client_secret = 'IvkNjQZHUR'
+    client_id = 'naver_api_id'
+    client_secret = 'naver_api_password'
     encText = urllib.parse.quote(title)
     url = 'https://openapi.naver.com/v1/search/movie.json?display=100&query=' + encText
     request = urllib.request.Request(url)
